@@ -48,22 +48,22 @@
 
 2. Добавьте следующий конфигурационный файл:
 
-    ```
-    [Unit]
-    Description=My ASP.NET Application
-    
-    [Service]
-    WorkingDirectory=/home/dev-user/api
-    ExecStart=/usr/bin/dotnet /home/dev-user/api/web-service-demo.dll
-    Restart=always
-    RestartSec=10
-    SyslogIdentifier=demoapi
-    User=www-data
-    Environment=ASPNETCORE_ENVIRONMENT=Production
-    
-    [Install]
-    WantedBy=multi-user.target
-    ```
+```
+[Unit]
+Description=Demo ASP.NET Application
+
+[Service]
+WorkingDirectory=/home/dev-user/api
+ExecStart=/usr/bin/dotnet web-service-demo.dll
+Restart=always
+RestartSec=10
+SyslogIdentifier=demoapi
+User=root
+Environment=ASPNETCORE_ENVIRONMENT=Production
+
+[Install]
+WantedBy=multi-user.target
+```
    (Замените `/home/dev-user/api/web-service-demo.dll` на путь к вашему приложению.)
 
 3. Перезагрузите демон systemd:
