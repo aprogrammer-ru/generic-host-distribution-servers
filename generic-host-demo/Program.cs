@@ -45,6 +45,7 @@ class Program
 
         // Запускаем хост
         await host.RunAsync();
+       // Console.WriteLine("Hello OTUS!");
     }
 }
 

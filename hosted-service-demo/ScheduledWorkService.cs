@@ -22,9 +22,10 @@ public class ScheduledWorkService : BackgroundService
 
     protected bool IsScheduledDateTime()
     {
-        return DateTime.UtcNow.ToShortDateString() != _lastExecutedDate
+        return true;
+            /*DateTime.UtcNow.ToShortDateString() != _lastExecutedDate
         && DateTime.UtcNow.Hour == 0 
-        && DateTime.UtcNow.Minute == 0;
+        && DateTime.UtcNow.Minute == 0;*/
 
     }
 
