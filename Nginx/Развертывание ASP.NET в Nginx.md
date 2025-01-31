@@ -53,7 +53,7 @@
     Description=My ASP.NET Application
     
     [Service]
-    WorkingDirectory=/var/www/demoapi
+    WorkingDirectory=/home/dev-user/api
     ExecStart=/usr/bin/dotnet /home/dev-user/api/web-service-demo.dll
     Restart=always
     RestartSec=10
